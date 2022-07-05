@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+//  Text
+$VeryDarkDesaturatedBlue: hsl(238, 29%, 16%);
+$SoftRed: hsl(14, 88%, 65%);
+
+// #### Gradient
+// Background gradient:
+
+$SoftViolet: hsl(273, 75%, 66%);
+$SoftBlue: hsl(240, 73%, 65%);
+
+// ### Neutral
+// #### Text
+$VeryDarkGrayishBlue: hsl(237, 12%, 33%);
+$DarkGrayishBlue: hsl(240, 6%, 50%);
+
+// #### Dividers
+$LightGrayishBlue: hsl(240, 5%, 91%);
+
+*{
+  margin:0;
+  padding:0;
+  
+}
+
+
+
+body{
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: calc(12/16*1rem);
+  background-image:linear-gradient(to bottom, $SoftViolet, $SoftBlue );
+}
+
+
+.container{
+  background-color: hsl(0, 0%, 100%);
+  width:calc(328/375*100vw);
+  margin:auto;
+  border-radius: 30px;
+}
+
+aside{
+  picture{
+    
+    img{
+      width:60vw;
+    }
+  }
+}
+
+main{
+
+  h1{
+    text-align: center;
+    width:100%;
+  }
+
+  ul{
+    li{
+      list-style: none;
+      
+      span{
+        display:block;
+        text-align:left;
+      }
+      
+      .question{
+        font-weight: 700;
+      }
+    }
+  }
+}
