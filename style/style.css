@@ -2,6 +2,8 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -16,19 +18,69 @@ body {
   width: calc(328/375*100vw);
   margin: auto;
   border-radius: 30px;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  margin-top: calc(148/16*1rem);
+  margin-bottom: calc(85/16*1rem);
+  box-shadow: 0px 56px 77px -12px rgba(29, 30, 53, 0.51);
+  -webkit-box-shadow: 0px 56px 77px -12px rgba(29, 30, 53, 0.51);
+  -moz-box-shadow: 0px 56px 77px -12px rgba(29, 30, 53, 0.51);
+}
+
+aside {
+  margin-top: calc(-110/375*100vw);
+  margin-bottom: 62px;
+}
+
+aside picture {
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 aside picture img {
-  width: 60vw;
+  width: calc(237/375*100vw);
+  height: 100%;
+  z-index: 550;
+}
+
+aside picture::before {
+  content: '';
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  position: absolute;
+  background-image: url(/images/bg-pattern-mobile.svg);
+  bottom: -30px;
+  display: block;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 
 main h1 {
   text-align: center;
   width: 100%;
+  color: black;
+  font-size: calc(30/16*1rem);
+  margin-bottom: 13px;
+}
+
+main ul {
+  width: calc(280/375*100vw);
+  padding-bottom: calc(48/16*1rem);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main ul li {
+  padding: 18px 0 18px 0;
   list-style: none;
+  position: relative;
+  border-bottom: 1px solid #e7e7e9;
+  color: #787887;
 }
 
 main ul li span {
@@ -37,6 +89,45 @@ main ul li span {
 }
 
 main ul li .question {
+  width: 99%;
+  font-size: calc(14/16*1rem);
+  letter-spacing: -0.04em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main ul li .question .arrow {
+  content: '';
+  width: calc(10/16*1rem);
+  height: auto;
+  background-image: url(/images/icon-arrow-down.svg);
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  right: 0;
+}
+
+main ul li .bold {
   font-weight: 700;
+}
+
+main ul li .answer {
+  margin-top: 1rem;
+  font-size: calc(12/16*1rem);
+  display: none;
+  width: 90%;
+}
+
+main ul li .show {
+  display: block;
+}
+
+main ul li .transform {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 /*# sourceMappingURL=style.css.map */
