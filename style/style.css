@@ -223,11 +223,11 @@ main ul li .transform {
     margin-top: 71px;
     font-size: calc(33/16*1rem);
   }
-  main .question {
+  main ul li .question {
     font-size: 1rem;
     letter-spacing: -0.06em;
   }
-  main .answer {
+  main ul li .answer {
     font-size: calc(13/16*1rem);
     letter-spacing: -0.05em;
   }

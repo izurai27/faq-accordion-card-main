@@ -251,14 +251,19 @@ main{
       font-size: calc(33/16*1rem);
     }
     
-    .question{
-      font-size: 1rem;
-      letter-spacing: -0.06em;
-    }
+    ul{
+      li{
+        .question{
+          font-size: 1rem;
+          letter-spacing: -0.06em;
+        }
+    
+        .answer{
+          font-size: calc(13/16*1rem);
+          letter-spacing: -0.05em;
+        }
 
-    .answer{
-      font-size: calc(13/16*1rem);
-      letter-spacing: -0.05em;
+      }
     }
 
 
