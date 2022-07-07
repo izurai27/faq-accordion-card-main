@@ -29,6 +29,7 @@ body {
 }
 
 aside {
+  width: calc(237/375*100vw);
   margin-top: calc(-110/375*100vw);
   margin-bottom: 62px;
 }
@@ -38,12 +39,6 @@ aside picture {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-}
-
-aside picture img {
-  width: calc(237/375*100vw);
-  height: 100%;
-  z-index: 550;
 }
 
 aside picture::before {
@@ -59,6 +54,10 @@ aside picture::before {
   background-position: bottom;
 }
 
+main {
+  width: calc(280/328*100%);
+}
+
 main h1 {
   text-align: center;
   width: 100%;
@@ -68,7 +67,6 @@ main h1 {
 }
 
 main ul {
-  width: calc(280/375*100vw);
   padding-bottom: calc(48/16*1rem);
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -113,6 +111,7 @@ main ul li .question .arrow {
 
 main ul li .bold {
   font-weight: 700;
+  color: black;
 }
 
 main ul li .answer {
@@ -129,5 +128,77 @@ main ul li .show {
 main ul li .transform {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+.box {
+  display: none;
+}
+
+@media only screen and (min-width: 1440px) {
+  .container {
+    width: calc(922/1440*100vw);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+  }
+  .container::after {
+    content: '';
+    width: 100px;
+    height: 100px;
+    background-image: url(/images/illustration-box-desktop.svg);
+    position: absolute;
+    left: -48px;
+    background-size: cover;
+  }
+  aside {
+    width: calc(450/922*100%);
+    margin-top: calc(88/375*100vw);
+    margin-top: 0;
+    margin-left: -50px;
+    margin-bottom: 0;
+  }
+  aside picture {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+  }
+  aside picture img {
+    width: 100%;
+  }
+  aside picture::before {
+    background-image: url(/images/bg-pattern-desktop.svg);
+    bottom: -150px;
+    background-size: 200%;
+    right: 0;
+    background-position: right;
+    aspect-ratio: 1/2;
+  }
+  main {
+    width: calc(334/922*100%);
+    margin-right: 90px;
+  }
+  main h1 {
+    text-align: left;
+    margin-top: 71px;
+  }
+  .box {
+    display: block;
+    position: absolute;
+    left: 10px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -25,15 +25,12 @@ $LightGrayishBlue: hsl(240, 5%, 91%);
 //  border:1px solid grey; 
 }
 
-// html{
-//   height: 100%;
-// }
 
 body{
   font-family: 'Kumbh Sans', sans-serif;
   font-size: calc(12/16*1rem);
   background-image:linear-gradient(to bottom, $SoftViolet, $SoftBlue );
-  
+ 
 }
 
 .container{
@@ -51,7 +48,7 @@ body{
 }
 
 aside{
-  
+  width:calc(237/375*100vw);
   
   margin-top:calc(-110/375*100vw);
   margin-bottom:62px;  
@@ -62,15 +59,16 @@ aside{
     
     
 
-    img{
-      width:calc(237/375*100vw);
-      height: 100%;
-      z-index:550;
-    }
+    // img{
+    //   // width:calc(237/375*100vw);
+    //   // height: 100%;
+    //   z-index:550;
+    // }
 
     &::before{
       content:'';
       width:100%;
+      // height: auto;
       aspect-ratio: 1 / 1;
       position:absolute;
       background-image: url(/images/bg-pattern-mobile.svg);
@@ -89,6 +87,7 @@ aside{
 }
 
 main{
+  width:calc(280/328*100%);
 
   h1{
     text-align: center;
@@ -100,7 +99,7 @@ main{
 
   ul{
     
-    width:calc(280/375*100vw);
+    // width:calc(280/375*100vw);
     padding-bottom: calc(48/16*1rem);
     align-items: center;
     
@@ -142,6 +141,7 @@ main{
       
       .bold{
         font-weight: 700;
+        color:black;
       }
 
       .answer{
@@ -160,5 +160,84 @@ main{
       }
       
     }
+  }
+}
+
+.box{
+  display:none;
+}
+
+@media only screen and (min-width:1440px){
+  .container{
+    width:calc(922/1440*100vw);
+    display:flex;
+    justify-content: space-between;
+    overflow: hidden;
+    position:relative;
+    
+
+    &::after{
+      content:'';
+      width:100px;
+      height:100px;
+      background-image:url(/images/illustration-box-desktop.svg);
+      position:absolute;
+      left:-48px;
+      background-size: cover;
+      
+    }
+  }
+
+  aside{
+    width:calc(450/922*100%);
+    
+    margin-top:calc(88/375*100vw);
+    margin-top:0;
+    margin-left:-50px;
+    margin-bottom:0;
+    
+    
+    
+
+
+    // border:1px solid yellow;
+    picture{
+      display:flex;
+      justify-content: flex-end;
+      align-items: center;
+      overflow: hidden;
+      height:100%;
+      width:100%;
+
+
+      img{
+        width:100%;
+      }
+    
+      &::before{
+        background-image: url(/images/bg-pattern-desktop.svg);
+        bottom:-150px;
+        background-size: 200%;
+        right:0;
+        background-position: right;
+        aspect-ratio:1/2;
+      }  
+    }
+  }
+
+  main{
+    width:calc(334/922*100%);
+    margin-right:90px;
+
+    h1{
+      text-align: left;
+      margin-top:71px;
+    }
+  }
+
+  .box{
+    display:block;
+    position: absolute;
+    left:10px;
   }
 }
