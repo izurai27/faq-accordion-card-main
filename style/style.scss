@@ -26,7 +26,7 @@ $LightGrayishBlue: hsl(240, 5%, 91%);
 }
 
 html{
-  height: 100vh;
+  min-height: 100vh;
 }
 
 body{
@@ -71,13 +71,6 @@ aside{
     position:relative;
     height:fit-content;
     
-    
-
-    // img{
-    //   // width:calc(237/375*100vw);
-    //   // height: 100%;
-    //   z-index:550;
-    // }
 
     &::before{
       content:'';
@@ -184,7 +177,8 @@ main{
 @media only screen and (min-width:765px){
   
   body{
-    padding-top: calc(148/16*1rem);;
+    padding-top: calc(148/16*1rem);
+    padding-bottom: calc(148/16*1rem);
 
   }
   
